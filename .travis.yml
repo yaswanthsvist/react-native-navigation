@@ -11,6 +11,7 @@ branches:
   only:
   - master
   - v2
+  - v2-ci
 
 cache:
   directories:
