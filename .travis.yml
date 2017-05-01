@@ -26,8 +26,6 @@ install:
         # android sdk:
   - source ./scripts/env/installAndroidSDK.sh
         # android emulator:
-  #- echo yes | android update sdk --no-ui --all --filter "sys-img-armeabi-v7a-google_apis-25"
-  #- echo no | android create avd --name AVD -t android-25 --abi google_apis/armeabi-v7a
   #- android list avd
         # fbsimctl:
   - source ./scripts/env/installFbSimCtl.sh
@@ -36,6 +34,13 @@ script:
   - set -e
   - ./scripts/travis.sh
   - set +e
+
+before_script:
+  - echo yes | android update sdk --no-ui --all --filter "sys-img-armeabi-v7a-google_apis-25"
+  - echo no | android create avd --name AVD -t android-25 --abi google_apis/armeabi-v7a
+  - emulator -avd test -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
 
 after_script:
   - echo "BUILD FINISHED"
