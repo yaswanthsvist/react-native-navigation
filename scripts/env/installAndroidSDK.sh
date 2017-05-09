@@ -11,7 +11,7 @@ mkdir -p ~/.android
 # download android SDK
 echo "Downloading Android SDK"
 curl --location https://dl.google.com/android/android-sdk_r24.4.1-macosx.zip | tar -x -z -C $HOME
-echo y | android update sdk --no-ui --filter android-16
+echo y | android update sdk --no-ui --filter android-24,sys-img-armeabi-v7a-android-24
 
 # copy licenses
 # echo "Copying Android licenses"
