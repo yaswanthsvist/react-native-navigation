@@ -1,6 +1,14 @@
 os: osx
 osx_image: xcode8.3
 
+language: android
+components:
+  - build-tools-20.0.0
+  - android-L
+  - sys-img-armeabi-v7a-android-tv-l
+  - add-on
+  - extra
+
 env:
   global:
     - YARN_CACHE=$HOME/.yarn-cache
@@ -20,16 +28,16 @@ cache:
 
 install:
         # node:
-  - source ./scripts/env/installNode.sh
+  # - source ./scripts/env/installNode.sh
         # yarn:
-  - source ./scripts/env/installYarn.sh
-  - yarn config set cache-folder $YARN_CACHE
+  # - source ./scripts/env/installYarn.sh
+  # - yarn config set cache-folder $YARN_CACHE
         # android sdk:
   - source ./scripts/env/installAndroidSDK.sh
         # android emulator:
   #- android list avd
         # fbsimctl:
-  - source ./scripts/env/installFbSimCtl.sh
+  # - source ./scripts/env/installFbSimCtl.sh
 
 script:
   # - set -e
