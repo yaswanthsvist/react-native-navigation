@@ -11,15 +11,17 @@ import android.view.animation.DecelerateInterpolator;
 
 public class ViewCollapser {
     private static final int DURATION = 160;
-    public static final int FLING_DURATION = 40;
+    private static final int FLING_DURATION = 160;
     private CollapsingView view;
-    private ViewPropertyAnimator animator;
+
     private final ValueAnimator.AnimatorUpdateListener LISTENER =
             new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                 }
             };
+    private ViewPropertyAnimator animator;
+    private ObjectAnimator flingAnimator;
 
     public ViewCollapser(CollapsingView view) {
         this.view = view;
@@ -44,9 +46,7 @@ public class ViewCollapser {
     }
 
     public void collapse(float amount) {
-        if (animator != null) {
-            animator.cancel();
-        }
+        cancelAnimator();
         view.asView().setTranslationY(amount);
     }
 
@@ -83,16 +83,40 @@ public class ViewCollapser {
     }
 
     private void fling(final CollapseAmount amount, @NonNull final ValueAnimator.AnimatorUpdateListener updateListener) {
+        cancelAnimator();
         final float translation = amount.collapseToTop() ? view.getFinalCollapseValue() : 0;
-        ObjectAnimator animator = ObjectAnimator.ofFloat(view.asView(), View.TRANSLATION_Y, translation);
-        animator.setDuration(FLING_DURATION);
-        animator.setInterpolator(new DecelerateInterpolator());
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+        flingAnimator = ObjectAnimator.ofFloat(view.asView(), View.TRANSLATION_Y, translation);
+        flingAnimator.setDuration(FLING_DURATION);
+        flingAnimator.setInterpolator(new DecelerateInterpolator());
+        flingAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 updateListener.onAnimationUpdate(animation);
             }
         });
-        animator.start();
+        flingAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                updateListener.onAnimationUpdate(animation);
+            }
+        });
+        flingAnimator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                flingAnimator = null;
+            }
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                flingAnimator = null;
+            }
+        });
+        flingAnimator.start();
+
+    }
+
+    private void cancelAnimator() {
+        if (animator != null) {
+            animator.cancel();
+        }
     }
 }
