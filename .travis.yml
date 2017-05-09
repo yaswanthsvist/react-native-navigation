@@ -1,7 +1,6 @@
 os: osx
 osx_image: xcode8.3
 
-language: android
 components:
   - build-tools-20.0.0
   - android-L
