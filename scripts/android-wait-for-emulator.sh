@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Originally written by Ralf Kistner <ralf@embarkmobile.com>, but placed in the public domain
 
