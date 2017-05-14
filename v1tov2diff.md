@@ -58,11 +58,21 @@ Here are the major changes:
 
 ### Shared Element Transitions
 
+currently not supported
+
 ### Collapsing Views
+
+currently not supported
 
 ### Styling the Navigator 
 
+Currently no styling feature is supported.
+
 ### Adding buttons 
 
+Currently not supported 
+
 ### Styling the Tab Bar
+
+Currently not supported
 ## Docs
