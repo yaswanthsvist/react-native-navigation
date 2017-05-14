@@ -37,22 +37,22 @@ Here are the major changes:
 | push                |  ✅     |   ✅       |
 | pop                 |  ✅     |  ✅         |
 | showModal           |  ✅     |  ✅   |
-| popToRoot           |        |            |
-| resetTo             |        |            |
-| dismissModal        |        |            |
-| dismissAllModals    |        |            |
-| showLightBox        |        |            |
-| dismissLightBox     |        |            |
-| handleDeepLink      |        |            |
-| setOnNavigatorEvent |        |            |
-| setButtons          |        |            |
-| setTitle            |        |            |
-| toggleDrawer        |        |            |
-| toggleTabs          |        |            |
-| setTabBadge         |        |            |
-| switchToTab         |        |            |
-| toggleNavBar        |        |            |
-| Screen Visibility   |        |            |
+| popToRoot           |   ✅     |   ✅         |
+| resetTo             |   ✅     |     ✅       |
+| dismissModal        |   ✅     |     ✅       |
+| dismissAllModals    |   ✅     |      ✅      |
+| showLightBox        |   ✅     |      [Contribute](CONTRIBUTE.md)      |
+| dismissLightBox     |   ✅     |            |
+| handleDeepLink      |   ✅     |            |
+| setOnNavigatorEvent |   ✅     |            |
+| setButtons          |   ✅     |            |
+| setTitle            |   ✅     |            |
+| toggleDrawer        |   ✅     |            |
+| toggleTabs          |   ✅     |            |
+| setTabBadge         |    ✅    |            |
+| switchToTab         |    ✅    |            |
+| toggleNavBar        |   ✅     |            |
+| Screen Visibility   |   ✅     |            |
 
 ### Deep Links
 
