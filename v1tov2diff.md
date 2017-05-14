@@ -36,7 +36,7 @@ Here are the major changes:
 |---------------------|--------|------------|
 | push                |  `.push()`      |    `.from(this.props.screenId).push()`        |
 | pop                 |  `.pop()`      |   `.from(this.props.screenId).pop()`         |
-| showModal           |  `.showModal()`      |   `.from(this.props.screenId).showModal()`         |
+| showModal           |  `.showModal()`      |   `.showModal()`         |
 | popToRoot           |        |            |
 | resetTo             |        |            |
 | dismissModal        |        |            |
