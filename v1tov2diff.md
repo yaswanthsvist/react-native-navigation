@@ -5,27 +5,27 @@
 
 ### Screen API
 
-|                     | v1 iOS | v1 Android | v2 iOS | v2 Android |
-|---------------------|--------|------------|--------|------------|
-| push                |        |            |        |            |
-| pop                 |        |            |        |            |
-| showModal           |        |            |        |            |
-| popToRoot           |        |            |        |            |
-| resetTo             |        |            |        |            |
-| dismissModal        |        |            |        |            |
-| dismissAllModals    |        |            |        |            |
-| showLightBox        |        |            |        |            |
-| dismissLightBox     |        |            |        |            |
-| handleDeepLink      |        |            |        |            |
-| setOnNavigatorEvent |        |            |        |            |
-| setButtons          |        |            |        |            |
-| setTitle            |        |            |        |            |
-| toggleDrawer        |        |            |        |            |
-| toggleTabs          |        |            |        |            |
-| setTabBadge         |        |            |        |            |
-| switchToTab         |        |            |        |            |
-| toggleNavBar        |        |            |        |            |
-| Screen Visibility   |        |            |        |            |
+|                     | v1     | v2         |
+|---------------------|--------|------------|
+| push                |  `.push()`      |    `.from(this.props.navigatorId).push()`        |
+| pop                 |  `.pop()`      |   `.from(this.props.navigatorId).pop()`         |
+| showModal           |        |            |
+| popToRoot           |        |            |
+| resetTo             |        |            |
+| dismissModal        |        |            |
+| dismissAllModals    |        |            |
+| showLightBox        |        |            |
+| dismissLightBox     |        |            |
+| handleDeepLink      |        |            |
+| setOnNavigatorEvent |        |            |
+| setButtons          |        |            |
+| setTitle            |        |            |
+| toggleDrawer        |        |            |
+| toggleTabs          |        |            |
+| setTabBadge         |        |            |
+| switchToTab         |        |            |
+| toggleNavBar        |        |            |
+| Screen Visibility   |        |            |
 
 ### Deep Links
 
