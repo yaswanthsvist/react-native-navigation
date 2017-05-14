@@ -27,16 +27,16 @@ Here are the major changes:
 
 
 
-## Features
+## Feature Parity 
 ### Top Level API
 
 ### Screen API
 
 |                     | v1     | v2         |
 |---------------------|--------|------------|
-| push                |  `.push()`      |    `.from(this.props.navigatorId).push()`        |
-| pop                 |  `.pop()`      |   `.from(this.props.navigatorId).pop()`         |
-| showModal           |        |            |
+| push                |  `.push()`      |    `.from(this.props.screenId).push()`        |
+| pop                 |  `.pop()`      |   `.from(this.props.screenId).pop()`         |
+| showModal           |  `.showModal()`      |   `.from(this.props.screenId).showModal()`         |
 | popToRoot           |        |            |
 | resetTo             |        |            |
 | dismissModal        |        |            |
