@@ -42,17 +42,17 @@ Here are the major changes:
 | dismissModal        |   ✅     |     ✅       |
 | dismissAllModals    |   ✅     |      ✅      |
 | showLightBox        |   ✅     |      [Contribute](CONTRIBUTE.md)      |
-| dismissLightBox     |   ✅     |            |
-| handleDeepLink      |   ✅     |            |
-| setOnNavigatorEvent |   ✅     |            |
-| setButtons          |   ✅     |            |
-| setTitle            |   ✅     |            |
-| toggleDrawer        |   ✅     |            |
-| toggleTabs          |   ✅     |            |
-| setTabBadge         |    ✅    |            |
-| switchToTab         |    ✅    |            |
-| toggleNavBar        |   ✅     |            |
-| Screen Visibility   |   ✅     |            |
+| dismissLightBox     |   ✅     |       [Contribute](CONTRIBUTE.md)       |
+| handleDeepLink      |   ✅     |       [Contribute](CONTRIBUTE.md)       |
+| setOnNavigatorEvent |   ✅     |       [Contribute](CONTRIBUTE.md)       |
+| setButtons          |   ✅     |         [Contribute](CONTRIBUTE.md)     |
+| setTitle            |   ✅     |         [Contribute](CONTRIBUTE.md)     |
+| toggleDrawer        |   ✅     |        ✅     |
+| toggleTabs          |   ✅     |        ✅     |
+| setTabBadge         |    ✅    |       [Contribute](CONTRIBUTE.md)     |
+| switchToTab         |    ✅    |       ✅      |
+| toggleNavBar        |   ✅     |      [Contribute](CONTRIBUTE.md)      |
+| Screen Visibility   |   ✅     |       ✅     |
 
 ### Deep Links
 
