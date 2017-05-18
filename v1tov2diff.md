@@ -41,7 +41,7 @@ Here are the major changes:
 | resetTo             |   ✅     |     ✅       |
 | dismissModal        |   ✅     |     ✅       |
 | dismissAllModals    |   ✅     |      ✅      |
-| showLightBox        |   ✅     |      [Contribute](CONTRIBUTE.md)      |
+| showLightBox        |   ✅     |      [Contribute](CONTRIBUTING.md)      |
 | dismissLightBox     |   ✅     |       [Contribute](CONTRIBUTE.md)       |
 | handleDeepLink      |   ✅     |       [Contribute](CONTRIBUTE.md)       |
 | setOnNavigatorEvent |   ✅     |       [Contribute](CONTRIBUTE.md)       |
