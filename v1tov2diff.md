@@ -76,3 +76,31 @@ Currently not supported
 
 Currently not supported
 ## Docs
+
+### Top Screen API
+
+#### Events - On App Launched
+```js
+Navigation.events().onAppLaunched(() => {
+    Navigation.setRoot({
+      container: {
+        name: 'navigation.playground.WelcomeScreen'
+      }
+    });
+  });
+```
+
+#### registerContainer
+```js
+Navigation.registerContainer(`navigation.playground.WelcomeScreen`, () => WelcomeScreen);
+```
+#### setRoot 
+
+```js
+Navigation.setRoot({
+      container: {
+        name: 'navigation.playground.WelcomeScreen'
+      }
+    });
+```
+
