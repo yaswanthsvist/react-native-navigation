@@ -94,13 +94,62 @@ Navigation.events().onAppLaunched(() => {
 ```js
 Navigation.registerContainer(`navigation.playground.WelcomeScreen`, () => WelcomeScreen);
 ```
-#### setRoot 
-
+#### setRoot({params})
+Single page with two side menu: 
 ```js
 Navigation.setRoot({
       container: {
         name: 'navigation.playground.WelcomeScreen'
+      },
+      sideMenu: {
+        left: {
+          container: {
+            name: 'navigation.playground.TextScreen',
+            passProps: {
+              text: 'This is a left side menu screen'
+            }
+          }
+        },
+        right: {
+          container: {
+            name: 'navigation.playground.TextScreen',
+            passProps: {
+              text: 'This is a right side menu screen'
+            }
+          }
+        }
       }
+    });
+```
+tabs: 
+```js
+Navigation.setRoot({
+      tabs: [
+        {
+          container: {
+            name: 'navigation.playground.TextScreen',
+            passProps: {
+              text: 'This is a side menu center screen tab 1'
+            }
+          }
+        },
+        {
+          container: {
+            name: 'navigation.playground.TextScreen',
+            passProps: {
+              text: 'This is a side menu center screen tab 2'
+            }
+          }
+        },
+        {
+          container: {
+            name: 'navigation.playground.TextScreen',
+            passProps: {
+              text: 'This is a side menu center screen tab 3'
+            }
+          }
+        }
+      ]
     });
 ```
 
