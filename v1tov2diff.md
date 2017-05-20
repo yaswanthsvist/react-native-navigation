@@ -154,6 +154,20 @@ Navigation.setRoot({
 #### push(params)
 ```js
 Navigation.from(this.props.screenId).push({
-      name: 'navigation.playground.PushedScreen'
+      name: 'navigation.playground.PushedScreen',
+      passProps: {}
     });
 ```
+#### pop(params = {})
+```js
+Navigation.from(this.props.screenId).pop();
+```
+#### popTo(params)
+```js
+Navigation.from(this.props.screenId).popTo(this.props.previousScreenIds[0]);
+```
+#### popToRoot()
+```js
+Navigation.from(this.props.screenId).popToRoot();
+```
+
