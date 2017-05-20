@@ -79,6 +79,10 @@ Currently not supported
 
 ### Top Screen API
 
+#### Navigation
+```js
+import Navigation from 'react-native-navigation';
+```
 #### Events - On App Launched
 ```js
 Navigation.events().onAppLaunched(() => {
@@ -129,7 +133,8 @@ Navigation.setRoot({
           container: {
             name: 'navigation.playground.TextScreen',
             passProps: {
-              text: 'This is a side menu center screen tab 1'
+              text: 'This is tab 1',
+              myFunction: () => 'Hello from a function!'
             }
           }
         },
@@ -137,19 +142,18 @@ Navigation.setRoot({
           container: {
             name: 'navigation.playground.TextScreen',
             passProps: {
-              text: 'This is a side menu center screen tab 2'
-            }
-          }
-        },
-        {
-          container: {
-            name: 'navigation.playground.TextScreen',
-            passProps: {
-              text: 'This is a side menu center screen tab 3'
+              text: 'This is tab 2'
             }
           }
         }
       ]
     });
 ```
+### Screen API
 
+#### push(params)
+```js
+Navigation.from(this.props.screenId).push({
+      name: 'navigation.playground.PushedScreen'
+    });
+```
