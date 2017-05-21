@@ -101,10 +101,12 @@ Navigation.events().onAppLaunched(() => {
   });
 ```
 
-#### registerContainer
+#### registerContainer(screenID, generator, store = undefined, Provider = undefined)
+Every screen component in your app must be registered with a unique name. The component itself is a traditional React component extending React.Component.
 ```js
 Navigation.registerContainer(`navigation.playground.WelcomeScreen`, () => WelcomeScreen);
 ```
+
 #### setRoot({params})
 Single page with two side menu: 
 ```js
@@ -132,7 +134,7 @@ Navigation.setRoot({
       }
     });
 ```
-tabs: 
+Tabs: 
 ```js
 Navigation.setRoot({
       tabs: [
@@ -159,6 +161,7 @@ Navigation.setRoot({
 ### Screen API
 
 #### push(params)
+Push a new screen into this screen's navigation stack.
 ```js
 Navigation.from(this.props.screenId).push({
       name: 'navigation.playground.PushedScreen',
@@ -166,6 +169,7 @@ Navigation.from(this.props.screenId).push({
     });
 ```
 #### pop(screenId)
+Pop the top screen from this screen's navigation stack.
 ```js
 Navigation.from(this.props.screenId).pop();
 ```
@@ -174,6 +178,7 @@ Navigation.from(this.props.screenId).pop();
 Navigation.from(this.props.screenId).popTo(this.props.previousScreenIds[0]);
 ```
 #### popToRoot()
+Pop all the screens until the root from this screen's navigation stack
 ```js
 Navigation.from(this.props.screenId).popToRoot();
 ```
