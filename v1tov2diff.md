@@ -4,8 +4,12 @@ We are rebuilding react-native-navigation
 ## Why v2? 
 react-native-navigation is what we run internally in Wix and is one of the most popular navigation solutions out there. So why rebuild it? 
 ### A New Improved Core Architecture
-react-native-navigation has a few issues which are unsolvable in it’s current architecture. These issue originate from the same problem: you cannot specify on which screen you wish to make an action. Whenever you want to push, show modal or any other action, the action defaults to originate from your current screen. This covers most use cases but there are some edge cases:
-What if you want to update your navbar icons and the user pops the screen? Your icons might update on the wrong screen. What if you want to push a screen as a result of a redux action? There are ways to solve some of these problems in v1 but they are not straightforward. We want to change that. 
+react-native-navigation has a few issues which are unsolvable in it’s current architecture. <br>
+These issue originate from the same problem: you cannot specify on which screen you wish to make an action. Whenever you want to push, show modal or any other action, the action defaults to originate from your current screen. This covers most use cases but there are some edge cases: <br>
+* What if you want to update your navbar icons and the user pops the screen? Your icons might update on the wrong screen.
+* What if you want to push a screen as a result of a redux action? 
+
+There are ways to solve some of these problems in v1 but they are not straightforward. We want to change that. 
 
 #### From
 To solve this problem in v2, every screen receives as a prop it’s screenId. Whenever you want to perform an action from that screen you use the from method: 
