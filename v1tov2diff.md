@@ -20,8 +20,6 @@ v2 is written with contributors in mind from day 1. We want it to to be as easy 
 v2 is written in Test Driven Development. We have a test for every feature including features that are not implemented yet. This makes accepting pull requests extremely easy: If our tests pass, your pull request is accepted.
 
 
-## Feature Parity
-
 ## Where is it standing now?
 v2 currently supports most of react-native-navigation’s basic functions but it is still behind v1.
 Here is the full comparison of features between v1 and v2 (will be updated regulary):
