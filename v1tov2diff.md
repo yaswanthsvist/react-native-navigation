@@ -112,7 +112,7 @@ Navigation.registerContainer(`navigation.playground.WelcomeScreen`, () => Welcom
 ```
 
 #### setRoot({params})
-Single page with two side menu: 
+Start a Single page app with two side menu: 
 ```js
 Navigation.setRoot({
       container: {
@@ -138,7 +138,7 @@ Navigation.setRoot({
       }
     });
 ```
-Tabs: 
+Start a tab based app: 
 ```js
 Navigation.setRoot({
       tabs: [
