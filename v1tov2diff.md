@@ -18,7 +18,7 @@ Navigator.from(this.props.screenId).pop()
 ```   
 ### Built for Contributors 
 Currently, it requires a lot of work to accept pull requests. We need to manually make sure that everything works before we approve them because v1 is not thoroughly tested. <br>
-v2 is written with contributors in mind from day 1.
+v2 is written with contributors in mind from day one.
 
 #### TDD
 v2 is written in Test Driven Development. We have a test for every feature including features that are not implemented yet. This makes accepting pull requests extremely easy: If our tests pass, your pull request is accepted.
