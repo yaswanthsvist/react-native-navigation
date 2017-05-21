@@ -38,7 +38,7 @@ Here are the major changes:
 | pop                 |  ✅     |  ✅         |
 | showModal           |  ✅     |  ✅   |
 | popToRoot           |   ✅     |   ✅         |
-| resetTo             |   ✅     |     ✅       |
+| resetTo             |   ✅     |    [Contribute](CONTRIBUTING.md)      |
 | dismissModal        |   ✅     |     ✅       |
 | dismissAllModals    |   ✅     |      ✅      |
 | showLightBox        |   ✅     |      [Contribute](CONTRIBUTING.md)      |
@@ -47,10 +47,10 @@ Here are the major changes:
 | setOnNavigatorEvent |   ✅     |       [Contribute](CONTRIBUTING.md)       |
 | setButtons          |   ✅     |         [Contribute](CONTRIBUTING.md)     |
 | setTitle            |   ✅     |         [Contribute](CONTRIBUTING.md)     |
-| toggleDrawer        |   ✅     |        ✅     |
-| toggleTabs          |   ✅     |        ✅     |
+| toggleDrawer        |   ✅     |        [Contribute](CONTRIBUTING.md)   |
+| toggleTabs          |   ✅     |        [Contribute](CONTRIBUTING.md)     |
 | setTabBadge         |    ✅    |       [Contribute](CONTRIBUTING.md)     |
-| switchToTab         |    ✅    |       ✅      |
+| switchToTab         |    ✅    |        [Contribute](CONTRIBUTING.md)    |
 | toggleNavBar        |   ✅     |      [Contribute](CONTRIBUTING.md)      |
 | Screen Visibility   |   ✅     |       ✅     |
 
@@ -158,7 +158,7 @@ Navigation.from(this.props.screenId).push({
       passProps: {}
     });
 ```
-#### pop(params = {})
+#### pop(screenId)
 ```js
 Navigation.from(this.props.screenId).pop();
 ```
@@ -170,4 +170,29 @@ Navigation.from(this.props.screenId).popTo(this.props.previousScreenIds[0]);
 ```js
 Navigation.from(this.props.screenId).popToRoot();
 ```
+#### showModal(params = {})
+Show a screen as a modal.
+```js
+Navigation.showModal({
+      container: {
+        name: 'navigation.playground.ModalScreen',
+        passProps: {
+            key: 'value'
+        }
+      }
+    });
+```
+#### dismissModal(screenId)
+Dismiss modal.
+```js
+Navigation.dismissModal(this.props.screenId);
+```
+#### dismissAllModals()
+Dismiss all the current modals at the same time.
+```js
+Navigation.dismissAllModals();
+```
+#### Screen Lifecycle
+
+
 
