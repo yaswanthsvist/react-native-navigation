@@ -29,10 +29,10 @@ Here is the full comparison of features between v1 and v2 (will be updated regul
 
 |    API              | v1  | v2 |
 |--------------------|-----|----|
-| startTabBasedApp   |     |    |
-| startSinglePageApp |     |    |
-| registerScreen     |     |    |
-| drawer             |     |    |
+| startTabBasedApp   |   ✅    |   ✅  |
+| startSinglePageApp |   ✅   |  ✅   |
+| registerScreen     |   ✅   |  ✅   |
+| drawer             |    ✅  |    ✅ |
 ### Screen API
 
 |  API              | v1     | v2         |
