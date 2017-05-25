@@ -61,29 +61,6 @@ Here is the full comparison of features between v1 and v2 (will be updated regul
 
 Element tranisitions, adding buttons and styles are not supported yet.  
 
-### Shared Element Transitions
-
-currently not supported
-
-### Collapsing Views
-
-currently not supported
-
-### Styling the Navigator 
-
-Currently no styling feature is supported.
-
-### Adding buttons 
-
-Currently not supported 
-
-### Styling the Tab Bar
-
-Currently not supported
-
-## How can I help? 
-We encourage you to help us by making any of the following tests pass.
-
 ## Getting started with v2
 If v2 supports everything you need for your app we encourage you to use it. Here are the docs
 ## Docs
