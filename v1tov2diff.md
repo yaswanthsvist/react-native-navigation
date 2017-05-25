@@ -2,7 +2,7 @@
 We are rebuilding react-native-navigation
 
 ## Why Rebuild react-native-navigation? 
-react-native-navigation is what we run internally in Wix and is one of the most popular navigation solutions out there. So why rebuild it? 
+
 ### A New Improved Core Architecture
 react-native-navigation has a few issues which are unsolvable in it’s current architecture. <br>
 These issue originate from the same problem: you cannot specify on which screen you wish to make an action. Whenever you want to push, show modal or any other action, the action defaults to originate from your current screen. This covers most use cases but there are some edge cases: <br>
