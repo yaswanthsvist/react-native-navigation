@@ -1,7 +1,7 @@
-# v2 (WIP)
+#  React Native Navigation v2 (WIP)
 We are rebuilding react-native-navigation
 
-## Why v2? 
+## Why Rebuild react-native-navigation? 
 react-native-navigation is what we run internally in Wix and is one of the most popular navigation solutions out there. So why rebuild it? 
 ### A New Improved Core Architecture
 react-native-navigation has a few issues which are unsolvable in it’s current architecture. <br>
@@ -11,7 +11,7 @@ These issue originate from the same problem: you cannot specify on which screen 
 
 There are ways to solve some of these problems in v1 but they are not straightforward. We want to change that. 
 
-#### From
+#### New API
 To solve this problem in v2, every screen receives as a prop it’s screenId. Whenever you want to perform an action from that screen you use the from method: 
 ```js
 Navigator.from(this.props.screenId).pop()
@@ -20,7 +20,7 @@ Navigator.from(this.props.screenId).pop()
 Currently, it requires a lot of work to accept pull requests. We need to manually make sure that everything works before we approve them because v1 is not thoroughly tested. <br>
 v2 is written with contributors in mind from day one.
 
-#### TDD
+#### Written In TDD
 v2 is written in Test Driven Development. We have a test for every feature including features that are not implemented yet. This makes accepting pull requests extremely easy: If our tests pass, your pull request is accepted.
 
 
@@ -59,7 +59,7 @@ Here is the full comparison of features between v1 and v2 (will be updated regul
 | toggleNavBar        |   ✅     |      [Contribute](CONTRIBUTING.md)      |
 | Screen Visibility   |   ✅     |       ✅     |
 
-### Deep Links
+Element tranisitions, adding buttons and styles are not supported yet.  
 
 ### Shared Element Transitions
 
@@ -88,6 +88,16 @@ We encourage you to help us by making any of the following tests pass.
 If v2 supports everything you need for your app we encourage you to use it. Here are the docs
 ## Docs
 
+
+### Installation 
+1. Download react-native-navigation v2
+```bash
+yarn add react-native-navigation@2.x
+```
+##### iOS 
+Follow steps 2 - 5 [here](https://wix.github.io/react-native-navigation/#/installation-ios)
+##### Android
+Follow steps 2 - 6 [here](https://wix.github.io/react-native-navigation/#/installation-android)
 ### Top Screen API
 
 #### Navigation
@@ -208,7 +218,7 @@ Dismiss all the current modals at the same time.
 ```js
 Navigation.dismissAllModals();
 ```
-#### Screen Lifecycle
+#### Screen Lifecycle - onStop() and onStart()
 
 
 
