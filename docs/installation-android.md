@@ -82,3 +82,4 @@
 	/>
 	```
 
+7. Now go to your main folder and run "react-native run-android". It will try to download dependencies, will take some time for building the apk file just be patience.
